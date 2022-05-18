@@ -41,6 +41,7 @@ def write_embedded_data(data):
 
 
 def load_embedding_model():
+    ft.util.download_model('en',if_exists='ignore')
     ft_model = ft.load_model('cc.en.300.bin')
     return ft_model
 
